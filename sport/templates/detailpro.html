@@ -1,0 +1,16 @@
+{%extends "base.html"%}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail</title>
+</head>
+<body>
+    <title> {{ detail.name }}</title>
+ <h1> About  : {{ detail.full_descr }}</h1>
+ <img src="{{detail.img.url }}">
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+
+	<div id="page">
+
+
+	<header id="fh5co-header" class="fh5co-cover fh5co-cover-sm" role="banner" style="background-image:url({% static 'images/img_bg_2.jpg' %});" data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center">
+					<div class="display-t">
+						<div class="display-tc animate-box" data-animate-effect="fadeIn">
+							<h1>Gallery</h1>
+							<h2>Free html5 templates Made by <a href="http://freehtml5.co" target="_blank">freehtml5.co</a></h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+
+	<div id="fh5co-gallery">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+				<h2>Gym gallery</h2>
+				<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div class="row row-bottom-padded-md">
+			<div class="col-md-12">
+				<ul id="fh5co-portfolio-list">
+
+
+					{% for image in images %}
+					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url({{ image.img.url }}); ">
+						<a href="#">
+							<div class="case-studies-summary">
+								<span>{{ image.name }}</span>
+								<h2>{{ image.description }}</h2>
+							</div>
+						</a>
+					</li>
+					{% endfor %}
+
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
+
+
+

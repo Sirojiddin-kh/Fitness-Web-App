@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html1 lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form id=contact_form method=POST name=myform>
+       {% csrf_token %}
+       {{ form.name }}
+       {{ form.email }}
+       {{ form.subject }}
+       {{ form.phone }}
+       {{ form.message }}
+       <button class="theme-btn btn-style-two" type="submit" name="Submit">Send Massage
+       </button>
+           {% if messages %}
+           <ul class="messagelist">{% for message in messages %}
+               <li>{{ message }}</li>{% endfor %}
+           </ul>
+           {% endif %}
+   </form>
+
+</body>
+</html1>

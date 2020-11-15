@@ -1,0 +1,73 @@
+{%extends "base.html"%}
+{% load static %}
+{% block content %}
+	<div class="fh5co-loader"></div>
+	
+	<div id="page">
+
+
+	<header id="fh5co-header" class="fh5co-cover fh5co-cover-sm" role="banner" style="background-image:url({% static 'images/img_bg_2.jpg' %});" data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center">
+					<div class="display-t">
+						<div class="display-tc animate-box" data-animate-effect="fadeIn">
+							<h1>Pricing</h1>
+							<h2>Free html5 templates Made by <a href="http://freehtml5.co" target="_blank">freehtml5.co</a></h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	
+<div id="fh5co-pricing">
+	<div class="container">
+		<div class="row animate-box">
+			<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+				<h2>Pricing Plan</h2>
+				<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="pricing">
+				{% for item in services %}
+				<div class="col-md-3 animate-box">
+					<div class="price-box">
+						<h2 class="pricing-plan">{{ item.name }}</h2>
+						<div class="price"><sup class="currency">$</sup>{{ item.price }}<small>/month</small></div>
+						{% for cl in item.traings %}
+						<ul class="classes">
+							<li>{{ cl.participations }} {{cl.name }}</li>
+						</ul>
+						{% endfor %}
+						<a href="#" class="btn btn-select-plan btn-sm">Select Plan</a>
+					</div>
+				</div>
+				{% endfor %}
+
+
+			</div>
+		</div>
+	</div>
+</div>
+
+	<div id="fh5co-started" class="fh5co-bg" style="background-image: url({% static '/images/img_bg_3.jpg' %});">
+	<div class="overlay"></div>
+	<div class="container">
+		<div class="row animate-box">
+			<div class="col-md-8 col-md-offset-2 text-center">
+				<h2>Fitness Classes this Summer <br> <span> Pay Now and <br> Get <span class="percent">35%</span> Discount</span></h2>
+			</div>
+		</div>
+		<div class="row animate-box">
+			<div class="col-md-8 col-md-offset-2 text-center">
+				<p><a href="#" class="btn btn-default btn-lg">Become a Member</a></p>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
+

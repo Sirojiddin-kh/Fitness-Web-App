@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search</title>
+</head>
+<body>
+	<form action="{% url 'core:search'%}" method="get">
+			<input type="text" name="blog">
+			<button type="submit">Search</button>
+	</form>
+{% for item in list %}
+	<p>{{ item.title }}</p>
+{% endfor %}
+</body>
+</html>

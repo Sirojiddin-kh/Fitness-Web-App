@@ -1,0 +1,19 @@
+{%extends "base.html"%}
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail</title>
+    <link rel="stylesheet" href="{% static '/css/'"
+</head>
+<body>
+    <title> {{ object.title }}</title>
+ <h1> About  : {{ object.full_descr }}</h1>
+
+ <img style=" " src="{{object.img.url }}">
+</body>
+</html>
+{% endblock %}
